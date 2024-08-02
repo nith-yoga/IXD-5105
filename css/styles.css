@@ -48,13 +48,17 @@ body {
 }
 
 h2 {
+    font-family: brother-1816, sans-serif;
+    font-style: normal;
+    font-weight: 100;
     text-align: left;
     margin-left: 10px;
     font-size: 3em;
 }
 
 #about {
-    color: #252523
+    color: #252523;
+    padding: 10px;
 }
 
 #textbox {
@@ -72,6 +76,7 @@ h2 {
 
 #team {
     color: #D9D9D9;
+    padding: 1rem;
 }
 
 .portraits {
