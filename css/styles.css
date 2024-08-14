@@ -1,110 +1,413 @@
+/* GLOBAL */
+
 html {
-    display: inline-block;
     background-color: #D9D9D9;
-}
-
-header {
-    background-color: #252523;
-    display: block;
-    height: 12vh;
-    width: 100vw;
-    margin: 0;
-    padding: 0;
-    position: fixed;
-}
-
-header img {
-    display: flex;
-    flex-wrap: wrap;
-    height: 12vh;   
+    font-size: 16px;
 }
 
 body {
     margin: 0;
     padding: 0;
+    padding-top: 12vh;
 }
 
-.pages {
-    height: 100vh;
+/* Header */
+
+header {
+    background-color: #252523;
+    height: 12vh;
     width: 100vw;
-    display: block;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
 }
 
-#page-1 {
-    margin: 0 auto;
+header img {
+    height: 100%;   
+    max-width: auto;
+}
+
+/* Paragraphs */
+
+p {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* PAGE 1 - LANDING IMG */
+
+#page1 {
     background-color: #D9D9D9;
-    height: 932px;
+    min-height: 100vh;
+    box-sizing: border-box;
+    position: relative;
 }
 
 #landing-img {
-    height: 932px;
-    width: 100vw;
+    height: auto;
+    width: 100%;
+    display: block;
+    object-fit: cover;
 }
 
-#page-2 {
-    margin: 0 auto;
-    height: 646px;
+/* PAGE 2 - ABOUT NEXT */
+
+#page2 {
+    min-height: 646px;
     background-color: #D9D9D9;
 }
 
-h2 {
+.pagetitle {
     font-family: brother-1816, sans-serif;
     font-style: normal;
-    font-weight: 100;
+    font-weight: 600;
     text-align: left;
-    margin-left: 10px;
-    font-size: 3em;
-}
-
-#about {
-    color: #252523;
-    padding: 10px;
+    margin: 0 0 1em 1em;
+    font-size: 2rem;
 }
 
 #textbox {
-    background-color: #252523;
     margin: auto;
     width: 80vw;
-    height: 50vh;
+    height: auto;
     padding: 5vh;
 }
 
-#page-3 {
-    background-color: #252523;
-    height: 1969px;
+.abouttext {
+  font-size: 1.5em;
 }
+
+/* Ripped Tape */
+
+.rippedtape {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 10vh;
+}
+
+/* PAGE 3 - MEET THE TEAM */
+
+#page3 {
+    background-color: #252523;
+    min-height: 100vh;
+    position: relative;
+}
+
+#page-3-header {
+    position: relative;
+    text-align: center;
+    padding: 1rem 0;
+} 
+
+/* Page title with vectors */
 
 #team {
     color: #D9D9D9;
-    padding: 1rem;
+    margin-top: 1rem;
+    font-size: 5rem;
+    display: inline-block;
+    margin: 0;
+    position: relative;
 }
 
-.portraits {
-    color: #252523;
-    width: 490px;
-    height: 390px;
-    border: 40px solid #D9D9D9;
+.underline {
+    display: block;
+    margin: 0 auto;
+    width: 10%;
+    position: relative;
+    top: 0.5rem;
+    left: 11%;
+}
+
+/* Team Bios */
+
+.profiles {
+    width: 100%;
+    max-width: 1420px;
+    height: auto;
+}
+
+#profile1, #profile2, #profile3 {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.polaroid {
+    width: 30vw;
+    height: auto;
+    background-color: white;
+}
+
+.portrait {
+    width: 80%;
+    height: auto;
+    margin: 20px auto;
+    filter: grayscale(100%);
+}
+
+.polaroid, .portrait {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.profiletext {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.namebox {
+    width: 90%;
+    max-width: 576px;
+    height: auto;
+    background-color: #D9D9D9;
+    margin: 20px auto;
+    margin-left: 10%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.names {
+    font-family: "Nanum Pen Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+    margin: 0;
+    text-align: center;
+}
+
+.blurb {
+    height: auto;
+    width: 90%;
+    max-width: 576px;
+    background-color: #D9D9D9;
+    margin: 20px auto;
+    margin-left: 10%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#biotext {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: 550px;
 }
 
 .bios {
-    background-color: #D9D9D9;
-    width: 690px;
-}
-
-#bio-1 #bio-2 #bio-3 {
-    height: 350px;
-}
-
-#name-1 #name-2 #name-3 {
-    height: 90px;
-}
-
-#portrait-1 #name-1 #bio-1 {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
-#page-4 {
-    height: 2024px;
-    background-color: #D9D9D9;
+.role, .description {
+    margin: 10px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+/* PAGE 4 - CASE STUDIES/PROJECTS */
+
+#page4 {
+    position: relative;
+    background-image: url('/img/paperbg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+#projectstitle {
+    position: relative;
+    z-index: 1;
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 5rem;
+}
+
+.vector9 {
+    position: absolute;
+    width: 40vw;
+    height: auto;
+    bottom: 87%;
+    left: 70%;
+    transform: translateX(-50%);
+}
+
+.cardscontain {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    justify-items: center;
+    align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem;
+    width: 100%;
+}
+
+.projectcard {
+    width: 100%;
+    max-width: 510px;
+    margin-top: 2rem;
+    aspect-ratio: 4 / 6;
+    border-radius: 12px;
+    background: #D9D9D9;
+    box-shadow: 0 4px 4px #00000020;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, opacity 0.3s ease;
+    overflow: hidden;
+}
+
+.projectcard:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px #00000040;
+    background: #f9de4b;
+    opacity: 0.9;
+}
+
+.projectsimg {
+    max-width: 100%;
+    max-height: auto;
+}
+
+.projectsnames {
+    font-family: "Nanum Pen Script", cursive;
+    font-weight: 400;
+    font-size: 3rem;
+    text-align: left;
+    margin: 1rem;
+}
+
+.headline {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+.seemore {
+    text-align: right;
+    margin-right: 1rem;
+    font-size: 1.8rem;
+    margin-top: 2rem;
+}
+
+.seemore:hover {
+    color: #12179e;
+}
+
+/* PAGE 5 - PARTNERS */
+
+#page5 {
+    background: #252523;
+    height: 100vh;
+    position: relative;
+    background-image: url('/img/subwaybg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 2rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#partners {
+    color: #D9D9D9;
+    position: relative;
+    margin: 0;
+    bottom: 1rem;
+    text-align: center;
+    font-size: 5rem;
+    text-shadow: 0 4px 8px #00000020;
+}
+
+.partnersvector {
+    position: absolute;
+    width: 15%;
+    height: auto;
+    bottom: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 8px 12px #00000020;
+}
+
+.logos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    justify-content: center;
+    align-items: start;
+    margin-top: 2rem;
+}
+
+.partnerlogos {
+    width: 100%;
+    max-width: 240px;
+    height: 100%;
+    max-height: 240px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #f0f0f0;
+}
+
+/* RESPONSIVE MEDIA ADJUSTMENTS */
+
+/* PAGE 4 */
+@media (max-width: 1200px) {
+    .vector9 {
+        width: 50vw;
+    }
+}
+
+@media (max-width: 900px) {
+    .vector9 {
+        width: 60vw;
+    }
+}
+
+@media (max-width: 600px) {
+    #projectstitle {
+        font-size: 3rem;
+    }
+
+    .vector9 {
+        width: 70vw;
+        bottom: 80%;
+    }
+}
+
+@media (max-width: 800px) {
+    .cardscontain {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* PAGE 5 */
+@media (max-width: 900px) {
+    .logos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .logos {
+        grid-template-columns: 1fr;
+    }
 }
