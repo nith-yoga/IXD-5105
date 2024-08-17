@@ -17,17 +17,30 @@ header {
     background-color: #252523;
     height: 12vh;
     width: 100vw;
-    margin: 0;
     padding: 0;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 100;
+    display: flex;
+    justify-content: space-between;
 }
 
 header img {
     height: 100%;   
     max-width: auto;
+    margin-left: 5%;
+    
+}
+
+.menu {
+    fill: "none";
+    stroke: #535353;
+    margin-right: 5%;
+}
+
+.menu:hover {
+    background-color: #fff;
 }
 
 /* Paragraphs */
@@ -37,6 +50,12 @@ p {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+}
+
+/* Headings */
+h2{
+    font-family: "Handlee", cursive;
+    font-size: 2em;
 }
 
 /* PAGE 1 - LANDING IMG */
@@ -82,21 +101,51 @@ p {
   font-size: 1.5em;
 }
 
-/* Ripped Tape */
+/* Ripped Tapes */
 
-.rippedtape {
+#rippedtape1 {
     display: block;
     margin: 0 auto;
-    max-width: 100%;
+    max-width: 20vw;
     max-height: 10vh;
+    position: relative;
+    z-index: 9;
+    margin-top: 33vh;
+    top: 4rem;
+}
+#rippedtape2 {
+    display: block;
+    margin: 0 auto;
+    max-width: 20vw;
+    max-height: 10vh;
+    position: relative;
+    z-index: 9;
+    margin-top: 50vh;
+    top: 11rem;
+}
+#rippedtape3 {
+    display: block;
+    margin: 0 auto;
+    max-width: 20vw;
+    max-height: 10vh;
+    position: relative;
+    z-index: 9;
+    margin-top: 40%;
+    top: 15rem;
 }
 
 /* PAGE 3 - MEET THE TEAM */
+
+#invidiblediv {
+    width: 100%;
+    position: absolute;
+}
 
 #page3 {
     background-color: #252523;
     min-height: 100vh;
     position: relative;
+    padding-top: 4em;
 }
 
 #page-3-header {
@@ -104,6 +153,12 @@ p {
     text-align: center;
     padding: 1rem 0;
 } 
+
+#page3 h2 {
+    color: #fff;
+    font-family: "Inter", sans-serif;
+    margin: 0 10%;
+}
 
 /* Page title with vectors */
 
@@ -121,16 +176,30 @@ p {
     margin: 0 auto;
     width: 10%;
     position: relative;
-    top: 0.5rem;
-    left: 11%;
+    left: 8%;
+}
+
+#exclaim-line {
+    position: relative;
+    right: 8%;
+}
+
+#exclamation-dot {
+    position: relative;
+    right: 10%;
+    top: 2em;
 }
 
 /* Team Bios */
-
 .profiles {
     width: 100%;
     max-width: 1420px;
     height: auto;
+    padding: 2em 1em;
+    border-radius: 20px;
+    margin-left: 5%;
+    filter: grayscale(100%);
+    background-image: url(../img/crumpled\ paper\ -\ sj-objio-XFWiZTa2Ub0-unsplash.jpg);
 }
 
 #profile1, #profile2, #profile3 {
@@ -142,14 +211,15 @@ p {
 }
 
 .polaroid {
-    width: 30vw;
-    height: auto;
+    max-width: 30vw;
+    max-height: 80%;
+    height: 50%;
     background-color: white;
 }
 
 .portrait {
-    width: 80%;
-    height: auto;
+    max-width: 80%;
+    max-height: 80%;
     margin: 20px auto;
     filter: grayscale(100%);
 }
@@ -178,7 +248,7 @@ p {
 }
 
 .names {
-    font-family: "Nanum Pen Script", cursive;
+    font-family: "Handlee", cursive;
     font-weight: 400;
     font-style: normal;
     font-size: 3rem;
@@ -221,7 +291,7 @@ p {
 
 #page4 {
     position: relative;
-    background-image: url('/img/paperbg.jpg');
+    background-image: url('../img/paperbg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -243,7 +313,7 @@ p {
     position: absolute;
     width: 40vw;
     height: auto;
-    bottom: 87%;
+    bottom: 85%;
     left: 70%;
     transform: translateX(-50%);
 }
@@ -285,7 +355,7 @@ p {
 }
 
 .projectsnames {
-    font-family: "Nanum Pen Script", cursive;
+    font-family: "Handlee", cursive;
     font-weight: 400;
     font-size: 3rem;
     text-align: left;
@@ -316,7 +386,7 @@ p {
     background: #252523;
     height: 100vh;
     position: relative;
-    background-image: url('/img/subwaybg.png');
+    background-image: url('../img/subwaybg.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -342,7 +412,7 @@ p {
     position: absolute;
     width: 15%;
     height: auto;
-    bottom: 80%;
+    bottom: 78%;
     left: 50%;
     transform: translateX(-50%);
     box-shadow: 0 8px 12px #00000020;
@@ -365,6 +435,60 @@ p {
     border-radius: 50%;
     object-fit: cover;
     background-color: #f0f0f0;
+}
+
+/* Page 6 Newsletter */
+
+#page6 {
+    padding:5% 10% 5% 10%;
+    background-color: #fff;
+}
+
+#page6 h2 {
+    font-size: 5em;
+}
+
+#page6 p {
+    background-color: #D9D9D9;
+    padding: 5% 10%;
+    border-radius: 10px;
+    font-size: 2em;
+}
+
+/* Page 7 Contact Us */
+
+#page7 {
+    background-color: #252523;
+    padding:5% 10% 5% 10%;
+}
+
+#page7 h2 {
+    font-size: 5em;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.overall-container {
+    background-color: #D9D9D9;
+    padding: 4em 3em 5em 3em;
+    font-family: "Inter", sans-serif;
+    
+}
+
+.overall-container h3 {
+    width: max-content;
+    margin: 0 auto 4em auto;
+    font-size: 1.5em;
+}
+
+.contact-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.contact-button-container img {
+    margin-right: 2em;
 }
 
 /* RESPONSIVE MEDIA ADJUSTMENTS */
